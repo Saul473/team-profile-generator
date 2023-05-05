@@ -103,9 +103,9 @@ const renderTeamPage = function(employeeCards) {
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="indigo darken-4">
             <div class="nav-wrapper">
-              <a href="#" class="brand-logo center">Your Team</a>
+              <a class="brand-logo center">Your Team</a>
             </div>
           </nav>
     </header>
