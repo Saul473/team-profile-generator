@@ -7,32 +7,6 @@ const Engineer = require('./lib/Engineer');
 
 const teamArray = [];
 
-// const initialPrompt = () => {
-//     return inquirer.prompt
-//     ([
-//         {
-//             type: 'list',
-//             name: 'occupation',
-//             message: 'What would you like to do?',
-//             choices: [
-//                 'Add a Manager',
-//                 'Add an Engineer',
-//                 'Add an Intern'
-//             ]
-//         }
-//     ])
-//     .then(initialInput => {
-//         if(initialInput.occupation == 'Add a Manager') {
-//             addManager();
-//         } else if (initialInput.occupation == 'Add an Engineer') {
-//             addEngineer();
-//         } else {
-//             addIntern();
-//         }
-//     })
-// }
-
-
 const addManager = () => {
     return inquirer.prompt 
     ([
@@ -56,25 +30,7 @@ const addManager = () => {
             name: 'officeNumber',
             message: 'Enter office number'
         },
-        // {
-        //     type: 'confirm',
-        //     name: 'addAnotherEmployee',
-        //     message: 'Would you like to add someone else to the team?',
-        //     default: false
-        // }
     ])
-    // .then(managerInput => {
-    //     const {name, id, email, officeNumber, addAnotherEmployee} = managerInput;
-    //     const manager = new Manager (name, id, email, officeNumber);
-    //     teamArray.push(manager);
-    //     console.log(manager);
-
-    //     if (addAnotherEmployee) {
-    //         return initialPrompt(teamArray);
-    //     } else {
-    //         return teamArray
-    //     }
-    // })
     .then(managerInput => {
         const {name, id, email, officeNumber} = managerInput;
         const manager = new Manager (name, id, email, officeNumber);
@@ -83,94 +39,6 @@ const addManager = () => {
         console.log(manager);
     })
 };
-
-// const addEngineer = () => {
-//     return inquirer.prompt
-//     ([
-//         {
-//             type: 'input',
-//             name: 'name',
-//             message: "What is the engineer's name?"
-//         },
-//         {
-//             type: 'input',
-//             name: 'id',
-//             message: "What is the engineer's ID?"
-//         },
-//         {
-//             type: 'input',
-//             name: 'email',
-//             message: "What is the engineer's email?"
-//         },
-//         {
-//             type: 'input',
-//             name: 'github',
-//             message: "What is the engineer's GitHub?"
-//         },
-//         {
-//             type: 'confirm',
-//             name: 'addAnotherEmployee',
-//             message: 'Would you like to add someone else to the team?',
-//             default: false
-//         }
-//     ])
-//     .then(engineerInput => {
-//         const {name, id, email, github, addAnotherEmployee} = engineerInput;
-//         const engineer = new Engineer (name, id, email, github);
-//         teamArray.push(engineer);
-//         console.log(engineer);
-
-//         if (addAnotherEmployee) {
-//             return initialPrompt(teamArray);
-//         } else {
-//             return teamArray
-//         }
-//     })
-// }
-
-// const addIntern = () => {
-//     return inquirer.prompt
-//     ([
-//         {
-//             type: 'input',
-//             name: 'name',
-//             message: "What is the intern's name?"
-//         },
-//         {
-//             type: 'input',
-//             name: 'id',
-//             message: "What is the intern's ID?"
-//         },
-//         {
-//             type: 'input',
-//             name: 'email',
-//             message: "What is the intern's email?"
-//         },
-//         {
-//             type: 'input',
-//             name: 'school',
-//             message: "What school does the intern attend?"
-//         },
-//         {
-//             type: 'confirm',
-//             name: 'addAnotherEmployee',
-//             message: 'Would you like to add someone else to the team?',
-//             default: false
-//         }
-//     ])
-//     .then(internInput => {
-//         const {name, id, email, school, addAnotherEmployee} = internInput;
-//         const intern = new Intern (name, id, email, school);
-//         teamArray.push(intern);
-//         console.log(intern);
-
-//         if (addAnotherEmployee) {
-//             return initialPrompt(teamArray);
-//         } else {
-//             return teamArray
-//         }
-//     })
-// }
 
 const addEmployee = () => {
     return inquirer.prompt
