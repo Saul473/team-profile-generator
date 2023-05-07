@@ -2,9 +2,9 @@ const renderManager = function(manager) {
     return `
     <div class="row">
     <div class="col s12 m3">
-      <div class="card">
+      <div class="card z-depth-5">
         <div class="card-image">
-          <img src="./images/manager-icon.png">
+          <img src="/images/manager-icon.png">
           <h2 class="card-title black">Manager</h2>
         </div>
         <div class="card-content">
@@ -23,9 +23,9 @@ const renderIntern = function(intern) {
     return `
     <div class="row">
     <div class="col s12 m3">
-      <div class="card">
+      <div class="card z-depth-5">
         <div class="card-image">
-          <img src="./images/intern-icon.png">
+          <img src="/images/intern-icon.png">
           <h2 class="card-title black">Intern</h2>
         </div>
         <div class="card-content">
@@ -43,9 +43,9 @@ const renderEngineer = function(engineer) {
     return `
     <div class="row">
     <div class="col s12 m3">
-      <div class="card">
+      <div class="card z-depth-5">
         <div class="card-image">
-          <img src="./images/engineer-icon.png">
+          <img src="/images/engineer-icon.png">
           <h2 class="card-title black">Engineer</h2>
         </div>
         <div class="card-content">
@@ -98,10 +98,9 @@ const renderTeamPage = function(employeeCards) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Profile</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="./style.css"
 
 </head>
-<body>
+<body class="amber lighten-2">
     <header>
         <nav class="indigo darken-4">
             <div class="nav-wrapper">
